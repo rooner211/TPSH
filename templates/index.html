@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузка изображения</title>
+</head>
+<body>
+    <h1>Загрузите изображение</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Загрузить">
+    </form>
+
+    {% if filename %}
+    <h2>Изображение успешно загружено:</h2>
+    <p>{{ filename }}</p>
+    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" style="max-width: 500px;">
+    {% endif %}
+</body>
+</html>
