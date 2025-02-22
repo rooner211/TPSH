@@ -1,0 +1,180 @@
+/* Общие стили */
+body {
+    background-color: #1a1a1a; /* Темный фон */
+    color: #28a745;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+/* Форма загрузки */
+.upload-form {
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #28a745;
+}
+
+select, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для разделения формы на два блока */
+.upload-form {
+    display: flex;
+    justify-content: space-between; /* Разделяет блоки по краям */
+    gap: 20px; /* Расстояние между блоками */
+    background-color: transparent; /* Убираем фон у формы */
+    padding: 0; /* Убираем отступы у формы */
+}
+
+.form-left, .form-right {
+    background-color: #262626; /* Фон для каждого блока */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    flex: 1; /* Каждый блок занимает равное пространство */
+    max-width: 48%; /* Максимальная ширина блоков */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Расстояние между элементами внутри блока */
+}
+
+/* Левый блок */
+.form-left {
+    margin-right: 10px; /* Отступ от правого блока */
+}
+
+/* Правый блок */
+.form-right {
+    margin-left: 10px; /* Отступ от левого блока */
+    justify-content: center; /* Выравнивание элементов по вертикали */
+}
+
+/* Стили для кнопки и файла в правом блоке */
+.form-right .form-group {
+    width: 100%; /* Ширина на всю доступную область */
+}
+
+.form-right button {
+    width: 100%; /* Ширина кнопки на всю доступную область */
+    padding: 10px; /* Отступы внутри кнопки */
+    margin-top: auto; /* Кнопка прижимается к нижнему краю блока */
+}
+
+/* Ошибки */
+.error {
+    background-color: #dc3545;
+    color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+/* Результаты */
+.results {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.image-preview {
+    flex: 0 0 300px;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+.predictions {
+    flex: 1;
+}
+
+.predictions h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.prediction-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.prediction-item {
+    background-color: #262626;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.progress-container {
+    background-color: #333333;
+    height: 20px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.progress-bar {
+    background-color: #28a745;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.percentage {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    font-size: 0.9rem;
+}
